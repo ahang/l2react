@@ -15,13 +15,14 @@ class PostsIndex extends Component {
         <li 
           className="list-group-item" 
           key={post.id}>
-            {post.title}
+            <Link to={`/posts/${post.id}`}>
+              {post.title}
+            </Link>
         </li>
       )
     })
   }
   render() {
-    console.log(this.props.posts)
     return (
       <div>
         <div className="text-xs-right">
